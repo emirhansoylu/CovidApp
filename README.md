@@ -7,4 +7,5 @@ A basic Covid Tracker application running on UWP. <br />
 
 Note : Statistics on the graph are limited by one day a week.
 
-![alt text](https://https://github.com/Duckbuddyy/CovidApp/blob/master/Assets/Coviapp.png?raw=true)
+![Coviapp](https://user-images.githubusercontent.com/24587861/86528765-e5ad8880-beb3-11ea-8556-764bdb612481.png)
+
