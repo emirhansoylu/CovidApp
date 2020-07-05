@@ -1,0 +1,31 @@
+﻿<UserControl
+    x:Class="CovidApp.TopBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CovidApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="120"
+    d:DesignWidth="1200">
+
+    <Grid Padding="10" x:Name="Grid_TopPanel" Background="WhiteSmoke" Height="60"  RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.8*"/>
+            <ColumnDefinition Width=".9*"/>
+            <ColumnDefinition Width=".9*"/>
+            <ColumnDefinition Width=".9*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Country" FontSize="25" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <ComboBox x:Name="ComboBox_Country" FontSize="20" Grid.Column="0" Margin="130,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="250" SelectionChanged="ComboBox_Country_SelectionChanged"/>
+        <TextBlock Text="Cases" FontSize="25" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock x:Name="TextBlock_Cases" FontSize="25" Grid.Column="1" Margin="90,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Foreground="Gray" Text="{x:Bind countryInfo.confirmed}" />
+        <TextBlock Text="Deaths" FontSize="25" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock x:Name="TextBlock_Deaths" FontSize="25" Grid.Column="2" Margin="100,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Foreground="DarkRed" Text="{x:Bind countryInfo.deaths}" />
+        <TextBlock Text="Active" FontSize="25"  Grid.Column="3"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock x:Name="TextBlock_Active" FontSize="25"  Grid.Column="3" Margin="80,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Foreground="CadetBlue" Text="{x:Bind countryInfo.active}" />
+        <TextBlock Text="Recovered" FontSize="25"  Grid.Column="4"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock x:Name="TextBlock_Recovered" FontSize="25"  Grid.Column="4" Margin="130,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Foreground="YellowGreen" Text="{x:Bind countryInfo.recovered}" />
+    </Grid>
+</UserControl>
